@@ -1,0 +1,139 @@
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+  --fw-light: 400;
+  --fw-med: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+h1 {
+  color: var(--Light-gray);
+  font-size: 0.875rem;
+}
+h2 {
+  color: var(--Light-gray);
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+h3 {
+  color: var(--White);
+  font-weight: var(--fw-med);
+  line-height: 1.25;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--Light-grayish-blue);
+}
+
+/*=============== HOME ===============*/
+.home {
+}
+
+.container__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 5rem 1.75rem;
+  max-width: 1440px;
+}
+.card {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.875rem;
+}
+.purple {
+  position: relative;
+  background-color: var(--Moderate-violet);
+}
+.light-blue-grey {
+  background-color: var(--Very-dark-grayish-blue);
+}
+.white-1,
+.white-2 {
+  background-color: var(--White);
+}
+.dark-blue-grey {
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.header__card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.header__card img:nth-child(1) {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--Light-gray);
+}
+.title__card h1 {
+  margin-bottom: 0.125rem;
+}
+.logo {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 0;
+  height: 120px;
+  width: 105px;
+}
+.text__color {
+  color: var(--Very-dark-grayish-blue);
+}
+.text {
+  color: var(--Light-gray);
+  opacity: 0.7;
+}
+.black {
+  color: var(--Very-dark-grayish-blue);
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+/* For medium devices */
+
+/* For large devices */
+@media (min-width: 700px) {
+  .container__grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-inline: auto;
+  }
+  .card {
+    padding-inline: 3rem;
+  }
+  .purple {
+    grid-column: 1 / 3;
+  }
+  .white-2 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+  .dark-blue-grey {
+    grid-column: 2 / 4;
+  }
+}
